@@ -34,7 +34,7 @@ int main(){
    do {	
     	
 		int index = 0; 
-        //bool side;
+        bool side;
     	string input; 
     	input.clear();
     	cin >> input;
@@ -53,24 +53,24 @@ int main(){
         y_end = 7 - y_end;
 
           if (border_check(input, size_str, x, x_end) == false){
-              cerr << "Ошибка: ";
+              cerr << "Ошибка: Выход за границы";
             continue;
         }
         
-        // switch(swing){
-        // 	case 0: 
-		// 		side = white_step(table, y, x, swing); 
-        // 		break;
-        // 	case 1: 
-		// 		side = black_step(table, y, x, swing); 
-		// 		break;
-		// }
+        switch(swing){
+        	case 0: 
+				side = white_step(table, y, x, swing); 
+        		break;
+        	case 1: 
+				side = black_step(table, y, x, swing); 
+				break;
+		}
 		
 
-		// if(side == false){
-		// 	cerr << "Ошибка: сейчас ходит противоположная сторона \n";
-		// 	continue;
-		// }
+		if(side == false){
+			cerr << "Ошибка: сейчас ходит противоположная сторона \n";
+			continue;
+		}
 
       
 
