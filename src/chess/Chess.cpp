@@ -37,7 +37,6 @@ int main()
         cin >> input;
 
         printf("\n");
-
         int x, x_end, y, y_end;
         x = input[0 + index] - 'a';
         x_end = input[3 + index] - 'a';
