@@ -9,8 +9,7 @@ using namespace std;
 
 
 
-int main(){
-      setlocale(LC_ALL, "RUS");
+int main(){ setlocale(LC_ALL, "RUS");
       char table[numbers_of_string][numbers_of_string] = {
       {'p', 'p', 'p', 'p', 'p', 'p', 'p', 'p'},
       {'r', 'n', 'b', 'q', 'k', 'b', 'n', 'r'},
@@ -24,9 +23,8 @@ int main(){
   Output_Chessboard(table);
 
 
-    int swing = 0; 
-    int party = 1;
-    const int size_str = 10;
+ int swing = 0; 
+    int party = 1; const int size_str = 10;
     
     printf("\nХод белых: \n"); 
     printf("%d. ", party);
