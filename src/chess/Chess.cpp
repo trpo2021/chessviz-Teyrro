@@ -9,24 +9,24 @@ using namespace std;
 
 
 
-int main(){ setlocale(LC_ALL, "RUS");
+int main(){
+      setlocale(LC_ALL, "RUS");
       char table[numbers_of_string][numbers_of_string] = {
       {'p', 'p', 'p', 'p', 'p', 'p', 'p', 'p'},
       {'r', 'n', 'b', 'q', 'k', 'b', 'n', 'r'},
-   
-   
-   
-   
-      {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},  {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
-      {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},  {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+      {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+      {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+      {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+      {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
       {'P', 'P', 'P', 'P', 'P', 'P', 'P', 'P'},
       {'R', 'N', 'B', 'Q', 'K', 'B', 'N', 'R'}};
 
   Output_Chessboard(table);
 
 
- int swing = 0; 
-    int party = 1; const int size_str = 10;
+    int swing = 0; 
+    int party = 1;
+    const int size_str = 10;
     
     printf("\nХод белых: \n"); 
     printf("%d. ", party);
@@ -34,11 +34,9 @@ int main(){ setlocale(LC_ALL, "RUS");
    do {	
     	
 		int index = 0; 
-      
-      
-      
         bool side;
-    	string input; input.clear();
+    	string input; 
+    	input.clear();
     	cin >> input;
     	
  
@@ -59,7 +57,12 @@ int main(){ setlocale(LC_ALL, "RUS");
             continue;
         }
         
-        switch(swing){	case 0: 		side = white_step(table, y, x, swing); 		break;	case 1: 		side = black_step(table, y, x, swing); 
+        switch(swing){
+        	case 0: 
+				side = white_step(table, y, x, swing); 
+        		break;
+        	case 1: 
+				side = black_step(table, y, x, swing); 
 				break;
 		}
 		
