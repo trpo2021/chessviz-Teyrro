@@ -1,3 +1,9 @@
-$ cat .gitignore
-* .[oa]
-chess
+*
+!*.*
+!*/
+!Makefile
+*.out
+*.o
+*.a
+*.d
+.nfs*
