@@ -1,6 +1,6 @@
 #pragma once
-#include <string>
 #include <iostream>
+#include <string>
 
 using namespace std;
 #define numbers_of_string 8
