@@ -7,4 +7,4 @@ using namespace std;
 #define nubmers_of_column 8
 
 void Output_Chessboard(char table[8][8]);
-bool border_check(string input, const int size_str, int x, int x_end);
+bool border_check(string input, const int size_str, int x_end, int y_end);

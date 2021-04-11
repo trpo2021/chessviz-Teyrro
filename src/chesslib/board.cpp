@@ -22,13 +22,12 @@ void Output_Chessboard(char A[numbers_of_string][numbers_of_column])
     printf("  A B C D E F G H\n");
 }
 
-bool border_check(string input, const int size_str, int x, int x_end)
+bool border_check(string input, const int size_str, int x_end, int y_end)
 {
     int border_check = 0; // если значение равно 4, то мы не вышли за границу
     for (int i = 0; i < size_str; i++) {
         if ((input[i] >= 'a' && input[i] <= 'h')
-            || (input[i] >= '0' && input[i] <= '9') || (x == 0 && x == 8)
-            || (x_end == 0 && x_end == 8)) {
+            || (input[i] >= '0' && input[i] <= '9') || (x_end >= 0 && x_end <= 7) || (y_end >= 0 && y_end <= 7)) {
             border_check++;
         }
     }
