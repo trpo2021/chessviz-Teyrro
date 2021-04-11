@@ -11,8 +11,8 @@ int main()
 {
     setlocale(LC_ALL, "RUS");
     char table[numbers_of_string][numbers_of_string]
-            = {{'p', 'p', 'p', 'p', 'p', 'p', 'p', 'p'},
-               {'r', 'n', 'b', 'q', 'k', 'b', 'n', 'r'},
+            = {{'r', 'n', 'b', 'q', 'k', 'b', 'n', 'r'},
+               {'p', 'p', 'p', 'p', 'p', 'p', 'p', 'p'},
                {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
                {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
                {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
@@ -46,8 +46,8 @@ int main()
         y = 7 - y;
         y_end = 7 - y_end;
 
-        if (border_check(input, size_str, x, x_end) == false) {
-            cerr << "Ошибка: Выход за границы";
+        if (border_check(input, size_str, x_end, y_end) == false) {
+            cerr << "Ошибка: Выход за границы\n";
             continue;
         }
 
