@@ -1,0 +1,8 @@
+*
+!*.*
+!*/
+!Makefile
+*.[aod]
+*.out
+*.nfs
+*.json
