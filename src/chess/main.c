@@ -14,13 +14,12 @@
 
 int main(int argc, char* argv[])
 {
-    bool input_file = true;
     int count = 0;
     setlocale(LC_ALL, "RUS");
 
     if (argc != 2) {
-        printf(" ");
-        input_file = false;
+        printf("Неверное количество параметров строки");
+        exit(1);
     }
 
     FILE* file;
@@ -32,19 +31,14 @@ int main(int argc, char* argv[])
     print_board((*game).table);
 
     if ((file = fopen(argv[1], "r")) == NULL) {
-        printf("���������� ������� ����\n");
+        printf("Пустой файл\n");
         fclose(file);
-        input_file = false;
         exit(1);
     }
-
-    while (true) {
+	char input[str_size];
+    while (fgets(input, str_size, file)) {
         int index = 0;
-        char input[str_size];
-
-        if (input_file)
-            fgets(input, str_size, file);
-
+		
         if (input[0] >= 'A' && input[0] <= 'Z')
             index++;
 
