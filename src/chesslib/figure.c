@@ -24,7 +24,6 @@ bool move_check(struct game game, struct chess_info chess)
     int y_dif = abs(dy);
 
     switch (fig) {
-		
     case 'N': {
         if (x_dif == 2 && y_dif == 1)
             return true;

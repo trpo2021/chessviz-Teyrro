@@ -40,7 +40,7 @@ int main(int argc, char* argv[])
 
     while (true) {
         int index = 0;
-        char input[str_size]; //������� ������
+        char input[str_size];
 
         if (input_file)
             fgets(input, str_size, file);

@@ -2,7 +2,7 @@
 #include <stdbool.h>
 
 bool white_step(struct game* game, struct chess_info chess)
-{ //�������� �� ������� � ����� ����
+{
     if ((*game).table[chess.y][chess.x] < 'Z') {
         return true;
     }
@@ -10,7 +10,7 @@ bool white_step(struct game* game, struct chess_info chess)
 }
 
 bool black_step(struct game* game, struct chess_info chess)
-{ //�������� �� ������� � ����� ����
+{
     if ((*game).table[chess.y][chess.x] > 'a') {
         return true;
     }
