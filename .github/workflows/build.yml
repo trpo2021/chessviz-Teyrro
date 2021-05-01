@@ -14,3 +14,7 @@ jobs:
 
       - name: Build application
         run: make
+
+      - name: Build UNIT-test
+        run: make test
+make
