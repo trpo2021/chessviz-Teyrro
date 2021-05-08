@@ -17,4 +17,3 @@ jobs:
 
       - name: Build UNIT-test
         run: make test
-make
