@@ -6,8 +6,7 @@ FILE_NAME = move.txt
 CFLAGS = -Wall -Werror
 CPPFLAGS = -MMD -I chess_test -I thirdparty -I src    
 
-CC = gcc
-CXX = clang++
+CXX = gcc
 
 BIN_DIR = bin
 OBJ_DIR = obj
@@ -42,26 +41,31 @@ all: $(APP_PATH)
 -include $(DEPS)
 
 $(APP_PATH): $(APP_OBJECTS) $(LIB_PATH)
-	$(CC) $(CFLAGS) $(CPPFLAGS) $^ -o $@
+	$(CXX) $(CFLAGS) $(CPPFLAGS) $^ -o $@
 
 $(LIB_PATH): $(LIB_OBJECTS)
 	ar rcs $@ $^
 
 $(OBJ_DIR)/%.o: %.$(SRC_EXT) 
-	$(CC) -c $(CFLAGS) $(CPPFLAGS) $< -o $@
+	$(CXX) -c $(CFLAGS) $(CPPFLAGS) $< -o $@
 ##################################################
 .PHONY: test
 test:$(TEST_PATH)
+	
 
 -include $(DEPS_TEST) 
 
 $(TEST_PATH): $(TEST_OBJECTS) $(LIB_PATH)
-	$(CC) $(CFLAGS) $(CPPFLAGS_TEST) $^ -o $@
+	$(CXX) $(CFLAGS) $(CPPFLAGS_TEST) $^ -o $@
 
 ##################################################
 .PHONY: run ex
 run: $(APP_PATH)
 	./$< $(SRC_DIR)/$(APP_NAME)/$(FILE_NAME)
+
+.PHONY: test_run
+test_run:$(TEST_PATH)
+	./$(TEST_PATH)
 
 .PHONY: clean
 clean:
