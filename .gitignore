@@ -1,0 +1,10 @@
+*
+!*.*
+!*/
+!Makefile
+*.[aod]
+*.out
+*.nfs
+*.json
+*.log
+*.txt~
